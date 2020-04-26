@@ -5,6 +5,6 @@ readline.o: readline.c readline.h
 main.o: main.c factorial.h readline.h
 	gcc -c main.c
 all: main.o readline.o factorial.o
-	gcc main.o readline.o factorial.o -o myfactoral
+	gcc main.o readline.o factorial.o -o myfactorial
 clean:
-	rm -f *.o myfactoral
+	rm -f *.o myfactorial
