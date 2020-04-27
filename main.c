@@ -2,14 +2,17 @@
 #include "factorial.h"
 #include "readline.h"
 
-int main() {
-    char a[20];
-    scanf("%s", a);
-    if (read_line(a) == 1) {
-        int number;
-        sscanf(a, "%d", &number);
-        printf("%s", factorial(number));
+int main(int argc, char* argv[]) {
+    char* str;    
+    while(fgets(str, 50, stdin) != NULL) {
+        if (read_line(str) == 1) {
+            int number;
+            sscanf(str, "%d", &number);
+            printf("%s", factorial(number));
+        }
+        else {
+            printf("-1");
+        }
     }
-    else printf("-1");
     return 0;
-}
+} 
